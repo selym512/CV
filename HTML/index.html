@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Myles Santapaga</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js?ver=3.3"></script>	
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+</head>
+
+<body>
+<div id="header">
+	<div id="logo"><a href="#"><img src="images/logo.png"></a></div>
+	<ul id="main-menu">
+    	<li><a href="#about">About</a></li>
+        <li><a href="#experience">Projects</a></li>
+        <li><a href="https://github.com/selym512">Github</a></li>
+        <li><a href="images/resume.pdf">Résumé</a></li>
+
+
+    </ul>
+</div>
+
+<div id="container">
+
+<!--Begin About Section-->
+    <div id="about">
+    	<h1>About</h1>
+        <ul id="top-social">
+        	<!-- <li><a href="#" class="facebook">Facebook</a></li> -->
+            <li><a href="https://www.linkedin.com/in/myles-santapaga-17a197171/" class="linkedin">LinkedIn</a></li>
+        </ul>
+        <div class="top-divider"></div>
+        <div class="content">
+        	<img src="images/MylesSantapaga.jpg" />
+            <h2>My Name is Myles Santapaga, and I am a Software Engineer</h2>
+            <p>I am currently a senior Computer Science major at the New Jersey Institute of Technology. As the chairmen of the IT committee of Alpha Kappa Psi I aggregate work to committee members, help plan new initiatives relating to technology, and maintain our website.</p><p>With an interest in Software Engineering I am currently looking for opportunities to utilise and grow my abilities with Java, Python, C++, and other skills that can be found on my résumé.</p> 
+        </div>
+    <div class="bottom-divider"></div> 
+    </div>
+<!--End About Section-->
+
+<!--Begin Experience Section-->   
+
+    <div id="experience">
+    	<h1>Projects</h1>
+        <div class="top-divider"></div>
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <h2>Alpha Kappa Psi Website</h2>
+                    <p>Here is the website for the Chi-Zeta chapter of Alpha Kappa Psi, located at NJIT. We host it on Github, where I update it with fresh pictures and information of our recent activities to display our interests and achievments. We also have our brother's contact information and LinkedIn easily accessible to help with networking. During seasons of open registration we take submission through a opened up "rush" page.</p>
+                </div>
+                <div class="column">
+                    <a href="https://njitakpsi.org/" srel="prettyPhoto[1]" title="Image Description"><img src="images/akpsi.PNG"></a>
+                </div>
+            </div>
+
+        </div>    
+        <div class="container">
+                <div class="row">
+                    <div class="column">
+                        <h2>Grade Gater</h2>
+                        <p>I worked on Grader Gater with my team members Mike Defrancesco who developed the front-end and Justin Schuster who developed the back-end. I made the auto grading software built into the website with php, which analyses python code, fixes some syntax errors, then runs it. Based on errors made by students when writing the python code, the grader duducts points from the question and overall test grade and stores it for when the student logs into their account to check.</p>
+                    </div>
+                    <div class="column">
+                        <a href="https://web.njit.edu/~md537/frt/#login" srel="prettyPhoto[1]" title="Image Description"><img src="images/gater.PNG"></a>
+                    </div>
+                </div>
+            </div>    
+        <div class="bottom-divider"></div>
+    </div>
+<!--End Experience Section-->
+
+
+</div>
+
+ <!-- The JavaScript -->  
+        <script type="text/javascript">
+    		$(function() {
+                $('#main-menu li a').bind('click',function(event){
+                    var $anchor = $(this);
+                    
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1500,'easeInOutExpo');
+
+                    event.preventDefault();
+                });
+            });
+			
+ 			 $(document).ready(function(){
+    		$("a[rel^='prettyPhoto']").prettyPhoto({social_tools:false, deeplinking: false});
+  			});
+
+        </script>
+</body>
+</html>
